@@ -1,0 +1,59 @@
+{
+  "name": "react-native-upload-kit",
+  "version": "0.1.0",
+  "description": "TypeScript utilities for safe image and multipart uploads in React Native.",
+  "keywords": [
+    "react-native",
+    "upload",
+    "multipart",
+    "formdata",
+    "cloudinary",
+    "image-picker",
+    "typescript"
+  ],
+  "homepage": "https://github.com/StrongSan/react-native-upload-kit#readme",
+  "bugs": {
+    "url": "https://github.com/StrongSan/react-native-upload-kit/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StrongSan/react-native-upload-kit.git"
+  },
+  "license": "MIT",
+  "author": "StrongSan",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "docs",
+    "examples",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "prepack": "npm run build"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.0"
+  }
+}
